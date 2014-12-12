@@ -1,0 +1,28 @@
+Command line:
+   simu_txrx_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49429
+
+Fri Mar 21 15:18:20 2014
+
+
+ Elaboration Time: 0.343203 sec
+
+ Current Memory Usage: 507.032 Meg
+
+ Total Signals          : 53
+ Total Nets             : 62
+ Total Signal Drivers   : 24
+ Total Blocks           : 10
+ Total Primitive Blocks : 8
+ Total Processes        : 9
+ Total Traceable Variables  : 16
+ Total Scalar Nets and Variables : 564
+
+ Total Simulation Time: 6.72364 sec
+
+ Current Memory Usage: 507.032 Meg
+
+Fri Mar 21 15:32:28 2014
+

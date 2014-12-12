@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Xilinx\Project\Uart\Uart_clk\Uart_top.ncd
+OUTFILE=C:\Xilinx\Project\Uart\Uart_clk\Uart_top.bit
+FAMILY=Spartan6
+PART=xc6slx45t-3fgg484
+WORKINGDIR=C:\Xilinx\Project\Uart\Uart_clk
+LICENSE=ISE
+USER_INFO=_

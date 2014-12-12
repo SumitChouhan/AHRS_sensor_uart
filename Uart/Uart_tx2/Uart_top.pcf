@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.49d on Fri Feb 28 16:30:44 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Button<0>" LOCATE = SITE "F3" LEVEL 1;
+COMP "Button<1>" LOCATE = SITE "G6" LEVEL 1;
+COMP "Button<2>" LOCATE = SITE "F5" LEVEL 1;
+COMP "Baudrate<0>" LOCATE = SITE "C18" LEVEL 1;
+COMP "Baudrate<1>" LOCATE = SITE "Y6" LEVEL 1;
+COMP "tx" LOCATE = SITE "B21" LEVEL 1;
+COMP "Baudrate<2>" LOCATE = SITE "W6" LEVEL 1;
+COMP "clk_in" LOCATE = SITE "AB13" LEVEL 1;
+SCHEMATIC END;
+

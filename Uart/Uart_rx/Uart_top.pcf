@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.49d on Wed Feb 26 10:34:29 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "LED<0>" LOCATE = SITE "D17" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "AB4" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "D21" LEVEL 1;
+COMP "rx" LOCATE = SITE "H17" LEVEL 1;
+COMP "Baudrate<0>" LOCATE = SITE "C18" LEVEL 1;
+COMP "Baudrate<1>" LOCATE = SITE "Y6" LEVEL 1;
+COMP "Baudrate<2>" LOCATE = SITE "W6" LEVEL 1;
+COMP "clk_in" LOCATE = SITE "AB13" LEVEL 1;
+SCHEMATIC END;
+

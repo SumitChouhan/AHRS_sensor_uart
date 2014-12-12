@@ -1,0 +1,23 @@
+Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Xilinx/Project/Uart/Uart_tx2/simulation_isim_beh.exe -prj C:/Xilinx/Project/Uart/Uart_tx2/simulation_beh.prj work.simulation 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Xilinx/Project/Uart/Uart_tx2/Uart_tx.vhd" into library work
+Parsing VHDL file "C:/Xilinx/Project/Uart/Uart_tx2/simulation.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package std_logic_signed
+Compiling package numeric_std
+Compiling architecture behavioral of entity Uart_tx [uart_tx_default]
+Compiling architecture behavior of entity simulation
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 9 VHDL Units
+Built simulation executable C:/Xilinx/Project/Uart/Uart_tx2/simulation_isim_beh.exe
+Fuse Memory Usage: 36512 KB
+Fuse CPU Usage: 1028 ms

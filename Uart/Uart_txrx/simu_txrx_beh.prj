@@ -1,0 +1,5 @@
+vhdl work "Uart_tx.vhd"
+vhdl work "Uart_rx.vhd"
+vhdl work "clk_div.vhd"
+vhdl work "Uart_top.vhd"
+vhdl work "simu_txrx.vhd"

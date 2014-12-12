@@ -1,0 +1,778 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: Uart_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Uart_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Uart_top"
+Output Format                      : NGC
+Target Device                      : xc6slx45t-3-fgg484
+
+---- Source Options
+Top Module Name                    : Uart_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Xilinx\Project\Uart\Uart_txrx\Uart_tx.vhd" into library work
+Parsing entity <Uart_tx>.
+Parsing architecture <Behavioral> of entity <uart_tx>.
+Parsing VHDL file "C:\Xilinx\Project\Uart\Uart_txrx\Uart_rx.vhd" into library work
+Parsing entity <Uart_rx>.
+Parsing architecture <Behavioral> of entity <uart_rx>.
+Parsing VHDL file "C:\Xilinx\Project\Uart\Uart_txrx\clk_div.vhd" into library work
+Parsing entity <clk_div>.
+Parsing architecture <Behavioral> of entity <clk_div>.
+Parsing VHDL file "C:\Xilinx\Project\Uart\Uart_txrx\Uart_top.vhd" into library work
+Parsing entity <Uart_top>.
+Parsing architecture <Behavioral> of entity <uart_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Uart_top> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <clk_div> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Xilinx\Project\Uart\Uart_txrx\clk_div.vhd" Line 73. Case statement is complete. others clause is never selected
+
+Elaborating entity <Uart_tx> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Xilinx\Project\Uart\Uart_txrx\Uart_tx.vhd" Line 67: rx_data_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Xilinx\Project\Uart\Uart_txrx\Uart_tx.vhd" Line 68: tx_data should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "C:\Xilinx\Project\Uart\Uart_txrx\Uart_tx.vhd" Line 90. Case statement is complete. others clause is never selected
+
+Elaborating entity <Uart_rx> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Xilinx\Project\Uart\Uart_txrx\Uart_rx.vhd" Line 123. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Uart_top>.
+    Related source file is "C:\Xilinx\Project\Uart\Uart_txrx\Uart_top.vhd".
+WARNING:Xst:647 - Input <tick_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <Uart_top> synthesized.
+
+Synthesizing Unit <clk_div>.
+    Related source file is "C:\Xilinx\Project\Uart\Uart_txrx\clk_div.vhd".
+    Found 10-bit register for signal <Rx_Baud>.
+    Found 14-bit register for signal <Tx_Baud>.
+    Found 15-bit register for signal <Tx_counter>.
+    Found 15-bit register for signal <Rx_counter>.
+    Found 1-bit register for signal <Tx_tmp>.
+    Found 1-bit register for signal <Rx_tmp>.
+    Found 15-bit adder for signal <Tx_counter[14]_GND_7_o_add_5_OUT> created at line 89.
+    Found 15-bit adder for signal <Rx_counter[14]_GND_7_o_add_9_OUT> created at line 105.
+    Found 8x24-bit Read Only RAM for signal <_n0103>
+    Found 15-bit comparator equal for signal <Tx_Baud[14]_Tx_counter[14]_equal_5_o> created at line 85
+    Found 15-bit comparator equal for signal <Rx_Baud[14]_Rx_counter[14]_equal_9_o> created at line 101
+    WARNING:Xst:2404 -  FFs/Latches <Rx_Baud<14:10>> (without init value) have a constant value of 0 in block <clk_div>.
+    WARNING:Xst:2404 -  FFs/Latches <Tx_Baud<14:14>> (without init value) have a constant value of 0 in block <clk_div>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  56 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <clk_div> synthesized.
+
+Synthesizing Unit <Uart_tx>.
+    Related source file is "C:\Xilinx\Project\Uart\Uart_txrx\Uart_tx.vhd".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <tx>.
+    Found 4-bit register for signal <count>.
+    Found 1-bit register for signal <state>.
+    Found 8-bit register for signal <Tx_Data>.
+    Found 4-bit adder for signal <count[3]_GND_9_o_add_1_OUT> created at line 83.
+    Found 1-bit 12-to-1 multiplexer for signal <count[3]_PWR_9_o_Mux_0_o> created at line 70.
+WARNING:Xst:737 - Found 1-bit latch for signal <Tx_Reg<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Tx_Reg<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Tx_Reg<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Tx_Reg<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Tx_Reg<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Tx_Reg<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Tx_Reg<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Tx_Reg<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Tx_Reg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Tx_Reg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred  10 Latch(s).
+	inferred   2 Multiplexer(s).
+Unit <Uart_tx> synthesized.
+
+Synthesizing Unit <Uart_rx>.
+    Related source file is "C:\Xilinx\Project\Uart\Uart_txrx\Uart_rx.vhd".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <rx_cnt>.
+    Found 3-bit register for signal <state>.
+    Found 5-bit register for signal <Pulse_cnt>.
+    Found 8-bit register for signal <Rx_Data>.
+    Found 4-bit register for signal <Dbit_cnt>.
+    Found 8-bit register for signal <Rx_Data_out>.
+    Found 1-bit register for signal <tick_out>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 4                                              |
+    | Clock              | rx_clk_in (rising_edge)                        |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <Dbit_cnt>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 50                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 5                                              |
+    | Clock              | rx_clk_in (rising_edge)                        |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <rx_cnt[3]_GND_21_o_add_0_OUT> created at line 61.
+    Found 5-bit adder for signal <Pulse_cnt[4]_GND_21_o_add_29_OUT> created at line 117.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred  21 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <Uart_rx> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x24-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 5
+ 15-bit adder                                          : 2
+ 4-bit adder                                           : 2
+ 5-bit adder                                           : 1
+# Registers                                            : 15
+ 1-bit register                                        : 5
+ 10-bit register                                       : 1
+ 14-bit register                                       : 1
+ 15-bit register                                       : 2
+ 4-bit register                                        : 2
+ 5-bit register                                        : 1
+ 8-bit register                                        : 3
+# Latches                                              : 10
+ 1-bit latch                                           : 10
+# Comparators                                          : 2
+ 15-bit comparator equal                               : 2
+# Multiplexers                                         : 25
+ 1-bit 12-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 16
+ 15-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch Tx_Reg_0 hinder the constant cleaning in the block Uart_tx_block.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <Tx_Reg_9> has a constant value of 1 in block <Uart_tx_block>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Uart_rx>.
+The following registers are absorbed into counter <rx_cnt>: 1 register on signal <rx_cnt>.
+Unit <Uart_rx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Uart_tx>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Uart_tx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clk_div>.
+The following registers are absorbed into counter <Tx_counter>: 1 register on signal <Tx_counter>.
+The following registers are absorbed into counter <Rx_counter>: 1 register on signal <Rx_counter>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0103> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 24-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Baudrate>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <clk_div> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x24-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 1
+ 5-bit adder                                           : 1
+# Counters                                             : 4
+ 15-bit up counter                                     : 2
+ 4-bit up counter                                      : 2
+# Registers                                            : 58
+ Flip-Flops                                            : 58
+# Comparators                                          : 2
+ 15-bit comparator equal                               : 2
+# Multiplexers                                         : 22
+ 1-bit 12-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 16
+ 5-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch Tx_Reg_0 hinder the constant cleaning in the block Uart_tx.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <Tx_Reg_9> has a constant value of 1 in block <Uart_tx>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Uart_rx_block/FSM_1> on signal <Dbit_cnt[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Uart_rx_block/FSM_0> on signal <state[1:3]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ idle        | 000
+ start       | 001
+ data_first  | 010
+ data_remain | 011
+ stop        | 100
+ send_start  | 101
+ send_done   | 110
+-------------------------
+INFO:Xst:2261 - The FF/Latch <Rx_Baud_6> in Unit <clk_div> is equivalent to the following FF/Latch, which will be removed : <Tx_Baud_10> 
+INFO:Xst:2261 - The FF/Latch <Rx_Baud_7> in Unit <clk_div> is equivalent to the following FF/Latch, which will be removed : <Tx_Baud_11> 
+INFO:Xst:2261 - The FF/Latch <Rx_Baud_8> in Unit <clk_div> is equivalent to the following FF/Latch, which will be removed : <Tx_Baud_12> 
+INFO:Xst:2261 - The FF/Latch <Rx_Baud_9> in Unit <clk_div> is equivalent to the following FF/Latch, which will be removed : <Tx_Baud_13> 
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    state in unit <Uart_tx>
+
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    Tx_Reg_0 in unit <Uart_tx>
+
+
+Optimizing unit <Uart_top> ...
+
+Optimizing unit <clk_div> ...
+
+Optimizing unit <Uart_tx> ...
+
+Optimizing unit <Uart_rx> ...
+WARNING:Xst:1293 - FF/Latch <rx_cnt_3> has a constant value of 0 in block <Uart_rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <rx_cnt_3> has a constant value of 0 in block <Uart_rx>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Uart_top, actual ratio is 0.
+WARNING:Xst:1426 - The value init of the FF/Latch Uart_tx_block/Tx_Reg_0 hinder the constant cleaning in the block Uart_top.
+   You should achieve better results by setting this init to 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 98
+ Flip-Flops                                            : 98
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Uart_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 192
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 40
+#      LUT3                        : 27
+#      LUT4                        : 9
+#      LUT5                        : 10
+#      LUT6                        : 29
+#      MUXCY                       : 40
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 30
+# FlipFlops/Latches                : 108
+#      FD                          : 8
+#      FDC                         : 52
+#      FDE                         : 24
+#      FDP                         : 1
+#      FDPE                        : 1
+#      FDRE                        : 12
+#      LD                          : 9
+#      LDC                         : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 5
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45tfgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             108  out of  54576     0%  
+ Number of Slice LUTs:                  118  out of  27288     0%  
+    Number used as Logic:               118  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    139
+   Number with an unused Flip Flop:      31  out of    139    22%  
+   Number with an unused LUT:            21  out of    139    15%  
+   Number of fully used LUT-FF pairs:    87  out of    139    62%  
+   Number of unique control sets:        11
+
+IO Utilization: 
+ Number of IOs:                          10
+ Number of bonded IOBs:                   7  out of    296     2%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------+---------------------------------+-------+
+Clock Signal                                                               | Clock buffer(FF name)           | Load  |
+---------------------------------------------------------------------------+---------------------------------+-------+
+clk_in                                                                     | BUFGP                           | 52    |
+clk_div_unit/Tx_tmp                                                        | NONE(Uart_tx_block/count_3)     | 14    |
+Uart_tx_block/Tx_Reg_0_G(Uart_tx_block/state1:O)                           | NONE(*)(Uart_tx_block/Tx_Reg_1) | 9     |
+clk_div_unit/Rx_tmp                                                        | BUFG                            | 32    |
+Uart_tx_block/GND_9_o_state_AND_5_o(Uart_tx_block/GND_9_o_state_AND_5_o1:O)| NONE(*)(Uart_tx_block/state_LDC)| 1     |
+---------------------------------------------------------------------------+---------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.793ns (Maximum Frequency: 263.640MHz)
+   Minimum input arrival time before clock: 3.553ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_in'
+  Clock period: 3.793ns (frequency: 263.640MHz)
+  Total number of paths / destination ports: 7586 / 32
+-------------------------------------------------------------------------
+Delay:               3.793ns (Levels of Logic = 22)
+  Source:            clk_div_unit/Rx_counter_0 (FF)
+  Destination:       clk_div_unit/Rx_counter_14 (FF)
+  Source Clock:      clk_in rising
+  Destination Clock: clk_in rising
+
+  Data Path: clk_div_unit/Rx_counter_0 to clk_div_unit/Rx_counter_14
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.961  clk_div_unit/Rx_counter_0 (clk_div_unit/Rx_counter_0)
+     LUT6:I1->O            1   0.203   0.000  clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_lut<0> (clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_cy<0> (clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_cy<1> (clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_cy<2> (clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_cy<3> (clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_cy<3>)
+     MUXCY:CI->O          17   0.019   1.028  clk_div_unit/Mcompar_Rx_Baud[14]_Rx_counter[14]_equal_9_o_cy<4> (clk_div_unit/Rx_Baud[14]_Rx_counter[14]_equal_9_o)
+     LUT2:I1->O            1   0.205   0.000  clk_div_unit/Mcount_Rx_counter_lut<0> (clk_div_unit/Mcount_Rx_counter_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  clk_div_unit/Mcount_Rx_counter_cy<0> (clk_div_unit/Mcount_Rx_counter_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<1> (clk_div_unit/Mcount_Rx_counter_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<2> (clk_div_unit/Mcount_Rx_counter_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<3> (clk_div_unit/Mcount_Rx_counter_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<4> (clk_div_unit/Mcount_Rx_counter_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<5> (clk_div_unit/Mcount_Rx_counter_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<6> (clk_div_unit/Mcount_Rx_counter_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<7> (clk_div_unit/Mcount_Rx_counter_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<8> (clk_div_unit/Mcount_Rx_counter_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<9> (clk_div_unit/Mcount_Rx_counter_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<10> (clk_div_unit/Mcount_Rx_counter_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<11> (clk_div_unit/Mcount_Rx_counter_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<12> (clk_div_unit/Mcount_Rx_counter_cy<12>)
+     MUXCY:CI->O           0   0.019   0.000  clk_div_unit/Mcount_Rx_counter_cy<13> (clk_div_unit/Mcount_Rx_counter_cy<13>)
+     XORCY:CI->O           1   0.180   0.000  clk_div_unit/Mcount_Rx_counter_xor<14> (clk_div_unit/Mcount_Rx_counter14)
+     FDC:D                     0.102          clk_div_unit/Rx_counter_14
+    ----------------------------------------
+    Total                      3.793ns (1.804ns logic, 1.989ns route)
+                                       (47.6% logic, 52.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_div_unit/Tx_tmp'
+  Clock period: 3.296ns (frequency: 303.357MHz)
+  Total number of paths / destination ports: 102 / 32
+-------------------------------------------------------------------------
+Delay:               3.296ns (Levels of Logic = 3)
+  Source:            Uart_tx_block/count_3 (FF)
+  Destination:       Uart_tx_block/tx (FF)
+  Source Clock:      clk_div_unit/Tx_tmp rising
+  Destination Clock: clk_div_unit/Tx_tmp rising
+
+  Data Path: Uart_tx_block/count_3 to Uart_tx_block/tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.447   0.973  Uart_tx_block/count_3 (Uart_tx_block/count_3)
+     LUT5:I2->O            1   0.205   0.580  Uart_tx_block/Mmux_count[3]_PWR_9_o_Mux_0_o21 (Uart_tx_block/Mmux_count[3]_PWR_9_o_Mux_0_o2)
+     LUT6:I5->O            1   0.205   0.580  Uart_tx_block/Mmux_count[3]_PWR_9_o_Mux_0_o22 (Uart_tx_block/Mmux_count[3]_PWR_9_o_Mux_0_o21)
+     LUT6:I5->O            1   0.205   0.000  Uart_tx_block/Mmux_count[3]_PWR_9_o_Mux_0_o25 (Uart_tx_block/count[3]_PWR_9_o_Mux_0_o)
+     FDP:D                     0.102          Uart_tx_block/tx
+    ----------------------------------------
+    Total                      3.296ns (1.164ns logic, 2.132ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_div_unit/Rx_tmp'
+  Clock period: 3.554ns (frequency: 281.373MHz)
+  Total number of paths / destination ports: 298 / 56
+-------------------------------------------------------------------------
+Delay:               3.554ns (Levels of Logic = 3)
+  Source:            Uart_rx_block/Pulse_cnt_3 (FF)
+  Destination:       Uart_rx_block/Pulse_cnt_4 (FF)
+  Source Clock:      clk_div_unit/Rx_tmp rising
+  Destination Clock: clk_div_unit/Rx_tmp rising
+
+  Data Path: Uart_rx_block/Pulse_cnt_3 to Uart_rx_block/Pulse_cnt_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.447   0.943  Uart_rx_block/Pulse_cnt_3 (Uart_rx_block/Pulse_cnt_3)
+     LUT4:I1->O            9   0.205   0.830  Uart_rx_block/PWR_10_o_Pulse_cnt[4]_equal_14_o<4>11 (Uart_rx_block/PWR_10_o_Pulse_cnt[4]_equal_14_o<4>1)
+     LUT4:I3->O            2   0.205   0.617  Uart_rx_block/Mmux_state[2]_X_20_o_wide_mux_36_OUT111 (Uart_rx_block/Mmux_state[2]_X_20_o_wide_mux_36_OUT11)
+     LUT6:I5->O            1   0.205   0.000  Uart_rx_block/Mmux_state[2]_X_20_o_wide_mux_36_OUT51 (Uart_rx_block/state[2]_X_20_o_wide_mux_36_OUT<4>)
+     FDE:D                     0.102          Uart_rx_block/Pulse_cnt_4
+    ----------------------------------------
+    Total                      3.554ns (1.164ns logic, 2.390ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Uart_tx_block/GND_9_o_state_AND_5_o'
+  Clock period: 2.427ns (frequency: 412.057MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.427ns (Levels of Logic = 1)
+  Source:            Uart_tx_block/state_LDC (LATCH)
+  Destination:       Uart_tx_block/state_LDC (LATCH)
+  Source Clock:      Uart_tx_block/GND_9_o_state_AND_5_o falling
+  Destination Clock: Uart_tx_block/GND_9_o_state_AND_5_o falling
+
+  Data Path: Uart_tx_block/state_LDC to Uart_tx_block/state_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.498   0.715  Uart_tx_block/state_LDC (Uart_tx_block/state_LDC)
+     LUT3:I2->O            1   0.205   0.579  Uart_tx_block/GND_9_o_state_AND_6_o1 (Uart_tx_block/GND_9_o_state_AND_6_o)
+     LDC:CLR                   0.430          Uart_tx_block/state_LDC
+    ----------------------------------------
+    Total                      2.427ns (1.133ns logic, 1.294ns route)
+                                       (46.7% logic, 53.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in'
+  Total number of paths / destination ports: 110 / 72
+-------------------------------------------------------------------------
+Offset:              3.212ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       clk_div_unit/Rx_counter_14 (FF)
+  Destination Clock: clk_in rising
+
+  Data Path: reset to clk_div_unit/Rx_counter_14
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.560  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.430          clk_div_unit/Rx_Baud_0
+    ----------------------------------------
+    Total                      3.212ns (1.652ns logic, 1.560ns route)
+                                       (51.4% logic, 48.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_div_unit/Rx_tmp'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              3.553ns (Levels of Logic = 2)
+  Source:            rx (PAD)
+  Destination:       Uart_rx_block/rx_cnt_2 (FF)
+  Destination Clock: clk_div_unit/Rx_tmp rising
+
+  Data Path: rx to Uart_rx_block/rx_cnt_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   1.156  rx_IBUF (rx_IBUF)
+     LUT4:I0->O            3   0.203   0.650  Uart_rx_block/_n0157_inv1 (Uart_rx_block/_n0157_inv)
+     FDE:CE                    0.322          Uart_rx_block/rx_cnt_0
+    ----------------------------------------
+    Total                      3.553ns (1.747ns logic, 1.806ns route)
+                                       (49.2% logic, 50.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_div_unit/Tx_tmp'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Uart_tx_block/tx (FF)
+  Destination:       tx (PAD)
+  Source Clock:      clk_div_unit/Tx_tmp rising
+
+  Data Path: Uart_tx_block/tx to tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.447   0.579  Uart_tx_block/tx (Uart_tx_block/tx)
+     OBUF:I->O                 2.571          tx_OBUF (tx)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Uart_tx_block/GND_9_o_state_AND_5_o
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+Uart_tx_block/GND_9_o_state_AND_5_o|         |         |    2.427|         |
+clk_div_unit/Rx_tmp                |         |         |    2.540|         |
+clk_div_unit/Tx_tmp                |         |         |    2.478|         |
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Uart_tx_block/Tx_Reg_0_G
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+clk_div_unit/Tx_tmp|         |         |    1.063|         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_div_unit/Rx_tmp
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+clk_div_unit/Rx_tmp|    3.554|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_div_unit/Tx_tmp
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+Uart_tx_block/GND_9_o_state_AND_5_o|         |    3.118|         |         |
+Uart_tx_block/Tx_Reg_0_G           |         |    3.302|         |         |
+clk_div_unit/Rx_tmp                |    2.578|         |         |         |
+clk_div_unit/Tx_tmp                |    3.296|         |         |         |
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_in         |    3.793|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.95 secs
+ 
+--> 
+
+Total memory usage is 259184 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   25 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

@@ -1,0 +1,3 @@
+vhdl work "Uart_rx.vhd"
+vhdl work "clk_div.vhd"
+vhdl work "Uart_top.vhd"

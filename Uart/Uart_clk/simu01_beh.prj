@@ -1,0 +1,3 @@
+vhdl work "clk_div.vhd"
+vhdl work "Uart_top.vhd"
+vhdl work "simu01.vhd"

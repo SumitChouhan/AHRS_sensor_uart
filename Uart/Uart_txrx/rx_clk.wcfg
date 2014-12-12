@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Xilinx/Project/Uart/Uart_txrx/simu_txrx_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="simu_txrx" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/simu_txrx/uut/Uart_tx_block/tx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx</obj_property>
+      <obj_property name="ObjectShortName">tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simu_txrx/uut/Uart_tx_block/tx_clk_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_clk_in</obj_property>
+      <obj_property name="ObjectShortName">tx_clk_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simu_txrx/uut/Uart_rx_block/rx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rx</obj_property>
+      <obj_property name="ObjectShortName">rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simu_txrx/uut/Uart_rx_block/rx_clk_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rx_clk_in</obj_property>
+      <obj_property name="ObjectShortName">rx_clk_in</obj_property>
+   </wvobject>
+</wave_config>

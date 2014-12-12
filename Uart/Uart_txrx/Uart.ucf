@@ -1,0 +1,28 @@
+
+#-----------------------------------------------------------------------
+#------------------------------------------------------ Mapping --------
+#-----------------------------------------------------------------------
+
+NET "clk_in" LOC = "AB13";			//User clock
+
+#NET "rx_clk_out" LOC = "B3";		//USER SMA GPIO P
+#NET "tx_clk_out" LOC = "A3";		//USER SMA GPIO N
+
+NET "Baudrate[0]" LOC =  "C18";	//Dip Switch
+NET "Baudrate[1]" LOC =  "Y6";	
+NET "Baudrate[2]" LOC =  "W6";	
+
+#NET "Button" LOC = "F3";
+#NET "Button[0]" LOC =  "F3";		//Button
+#NET "Button[1]" LOC =  "G6";	
+#NET "Button[2]" LOC =  "F5";
+
+#NET "LED[0]" LOC =  "D17";		//Led
+#NET "LED[1]" LOC =  "AB4";	
+#NET "LED[2]" LOC =  "D21";
+
+NET "rx" LOC = "H17";				//USB1"tx"
+NET "tx" LOC = "B21";				//USB1"rx"
+
+#NET "rx_out" LOC = "B3";
+

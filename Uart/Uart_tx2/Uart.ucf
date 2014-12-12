@@ -1,0 +1,19 @@
+
+#-----------------------------------------------------------------------
+#------------------------------------------------------ Mapping --------
+#-----------------------------------------------------------------------
+
+NET "clk_in" LOC = "AB13";			//User clock
+
+#NET "tx_clk_out" LOC	= "A3";		//USER SMA GPIO N
+
+NET "Baudrate[0]" LOC =  "C18";	//Dip Switch
+NET "Baudrate[1]" LOC =  "Y6";	
+NET "Baudrate[2]" LOC =  "W6";	
+
+NET "Button[0]" LOC =  "F3";		//Button
+NET "Button[1]" LOC =  "G6";	
+NET "Button[2]" LOC =  "F5";
+
+NET "tx" LOC = "B21";				//USB1"rx"
+

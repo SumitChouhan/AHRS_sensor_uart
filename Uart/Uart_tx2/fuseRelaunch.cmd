@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Xilinx/Project/Uart/Uart_tx2/simulation_isim_beh.exe" -prj "C:/Xilinx/Project/Uart/Uart_tx2/simulation_beh.prj" "work.simulation" 

@@ -1,0 +1,4 @@
+work	"Uart_rx.vhd"
+work	"Uart_top.vhd"
+work	"Uart_tx.vhd"
+work	"clk_div.vhd"
